@@ -1,0 +1,235 @@
+\documentclass{beamer}
+\usepackage[applemac]{inputenc}
+\usepackage{graphicx}
+\usepackage{movie15}
+\usepackage[danish]{babel}
+\usepackage[version3]{mhchem}
+\usepackage{booktabs}
+\usepackage{SIunits}
+\usepackage{amsmath}
+\usefonttheme{structuresmallcapsserif}
+\setbeamerfont{frame title}{size=\LARGE,series=bfseries}
+\setbeamertemplate{navigation symbols} {}
+\usetheme{MGtheme}
+
+% Create the title frame:
+\title[Energi - 1. modul]{Energi - 1. modul}
+\subtitle{Energiformer, Energiomsætning, Potentiel energi og Kinetisk energi}
+\author{Thomas Mellergaard Amby}
+\institute{Marselisborg Gymnasium}
+\date{2015}
+%\logo{\includegraphics[width=1.5cm]{Mars}}
+
+\AtBeginSection[]
+{
+	\begin{frame}{Indhold:}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\begin{document}
+%\setbeamertemplate{background}{\includegraphics[width=\paperwidth,height=\paperheight]{Baggrund}}
+\setbeamertemplate{footline}[default]
+
+\begin{frame}
+\vfill
+\titlepage
+\vfill
+\end{frame}
+
+\section{Energiformer}
+\begin{frame}{Energiformer}
+	\begin{block}{De syv energiformer}
+		\begin{itemize}[<+->]
+			\item Kinetisk energi, $E_\mathrm{kin}$
+			\item Potentiel energi, $E_\mathrm{pot}$
+			\item Elektrisk energi
+			\item Termisk energi
+			\item Kemisk energi
+			\item Kerneenergi
+			\item Strålingsenergi
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Energiformer}\vfill
+	\begin{block}{Kinetisk energi}
+		Vi kender den kinetiske energi fra vores dagligdag. Det er denne energiform som knytter sig til bevægelse, hvorfor den på almindelig dansk oftest kaldes for ``Bevægelsesenergi''.  Energien opstår fordi et objekt har en hastighed.
+	\end{block}\vfill
+	\begin{block}{Potentiel energi}
+		Som med den kinetiske energi, er vi bekendte med den potentielle energi fra vores dagligdag. Vi kender energiformen under betegnelsen ``Beliggenhedsenergi'' altså en energi som opstår som følge af et objekts beliggenhed.
+	\end{block}\vfill
+\end{frame}
+
+\begin{frame}{Energiformer}
+	Fælles for alle de energiformer vi har nævnt ovenfor er at vi måler dem i enheden Joule (\joule). Når vi i fysikken snakker om noget vi kan måle kaldes dette for en ``fysisk størrelse'' eller blot en størrelse. Til alle fysiske størrelser knytter der sig et ``symbol''. Ligeledes er der til alle symboler knyttet en ``enhed''. Enheden fortæller os noget om hvad vi egentlig måler. Et eksempel er:
+
+\begin{center}	
+	Energi \hspace{1cm} $E$ \hspace{1cm}\joule
+\end{center}
+
+En størrelse uden enhed giver ingen mening i fysik.
+\end{frame}
+
+\begin{frame}{Energiformer}
+	Fælles for alle de energiformer vi har nævnt ovenfor er at vi måler dem i enheden Joule (\joule). Når vi i fysikken snakker om noget vi kan måle kaldes dette for en ``\alert{fysisk størrelse}'' eller blot en størrelse. Til alle fysiske størrelser knytter der sig et ``\alert{symbol}''. Ligeledes er der til alle symboler knyttet en ``\alert{enhed}''. Enheden fortæller os noget om hvad vi egentlig måler. Et eksempel er:
+
+\begin{center}	
+	Energi \hspace{1cm} $E$  \hspace{1cm}\joule
+\end{center}
+
+En størrelse uden enhed giver \alert{ingen} mening i fysik
+\end{frame}
+
+\section{Enheder}
+
+\begin{frame}{SI-systemet}
+\begin{table}
+	\centering
+	\caption{Tyngdeaccelerationen er en natur konstant, som har værdien 9,82 \meter\per\second\squared ~i Danmark.}
+	\begin{tabular}{@{ } l c c c @{ }}
+		\toprule[2pt]
+			Størrelse			&	Symbol	&	Enhed					&	Omregning\\
+		\midrule[1.25pt]
+			Acceleration		&	$a$		&	\meter\per\second\squared	&	\\	
+			Energi			&	$E$		&	\joule					&	$(\kilo\gram\cdot\meter\squared)\per\second\squared$\\
+			Fart				&	$v$		&	\meter\per\second			&\\
+			Højde			&	$h$		&	\meter					&\\
+			Masse			&	$m$		&	\kilo\gram					&\\
+			Tyngdeacceleration	&	$g$		&	\meter\per\second\squared	&
+		\bottomrule[2pt]
+	\end{tabular}
+\end{table}
+\end{frame}
+
+\section{Energiomsætning}
+\begin{frame}{Energibevarelse}
+I fysikkens verden er der bevarelse af energien. Hvad betyder det?\vfill
+
+\begin{theorem}
+	Den samlede energi i et system er konstant.
+\end{theorem}\vfill
+
+Det betyder at energi \emph{ikke} bare kan opstå, og det kan heller \emph{ikke} bare forsvinde. Energi omsættes derimod mellem forskellige energiformer.
+\end{frame}
+
+\begin{frame}{Energiomsætning}
+	\begin{block}{Et eksempel\ldots}
+		Elektrisk energi bliver til Strålings energi og Termisk energi.
+	\end{block}\pause\vfill
+	\begin{block}{En opgave\ldots}
+		Prøv om du i samarbejde med sidemanden kan finde 5 lignende eksempler på omsætninger mellem energi former fra din hverdag.
+	\end{block}
+\end{frame}
+
+\begin{frame}{Energiomsætning}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\textwidth]{14}
+	\end{figure}
+\end{frame}
+
+\section{Potentiel energi i tyngdefeltet}
+\begin{frame}{Potentiel energi}
+En genstand som er hævet over jorden siges at have en potentiel energi i sammenligning med en genstand som ligger på jordens overflade.\vfill
+
+For at gøre det nemt for os selv regner vi højder i forhold til havets overflade, derfor vil genstande som befinder sig ved havets overflade have en potentiel energi på 0 \joule.\vfill
+
+\begin{theorem}
+En genstand med massen $m$, som befinder sig i højden $h$ over havets overflade har den potentielle energi:
+\begin{equation}
+\notag E_\mathrm{pot} = m\cdot g\cdot h
+\end{equation}
+hvor $g$ er tyngdeaccelerationen som har værdien 9,82 \meter\per\second\squared.
+\end{theorem}
+\end{frame}
+
+\begin{frame}{Potentiel energi}
+	\input{pot-mass}
+\end{frame}
+
+\begin{frame}{Potentiel energi}
+	\input{pot-height}
+\end{frame}
+
+\begin{frame}{Potentiel energi}
+\begin{block}{Et eksempel}
+	Et æble med massen 100 \gram ~hænger på en gren, i æbletræet 7 \meter ~over jorden. Bestem æblets potentielle energi.
+\end{block}
+\end{frame}
+
+\begin{frame}{Potentiel energi}
+\begin{block}{Et eksempel}
+	Et æble med \alert{massen 100 \gram} hænger på en gren, i æbletræet \alert{7 \meter ~over jorden}. Bestem æblets potentielle energi.
+\end{block}\pause\vfill
+\begin{block}{Løsning}
+	\begin{itemize}[<+->]
+		\item Massen $m = 100 ~\gram = 0,100 ~\kilo\gram$
+		\item Tyngdeaccelerationen $g = 9,82 ~\meter\per\second\squared$
+		\item Højden $h = 7 ~\meter$
+	\end{itemize}\pause
+	\begin{align*}
+		E_\mathrm{pot} &= m\cdot g\cdot h\\
+			 &= 0,100 ~\kilo\gram\cdot 9,82 ~\meter\per\second\squared\cdot 7~\meter\\ 
+			 &= 8,874 ~\joule
+	\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Potentiel energi}
+\begin{block}{Et eksempel}
+	En potteplante med massen 2,2 \kilo\gram, som står i vinduet 90 \centi\meter ~over gulvet i en lejlighed, hvor gulvet ligger 12,0 \meter ~over gaden nedenfor.
+\end{block}\pause\vfill
+\begin{block}{Løsning}
+	\begin{itemize}[<+->]
+		\item Massen $m = 2,2 ~\kilo\gram$
+		\item Tyngdeaccelerationen $g = 9,82 ~\meter\per\second\squared$
+		\item Højden $h = (12,0 + 0,90) ~\meter$
+	\end{itemize}\pause
+	\begin{align*}
+		E_\mathrm{pot} &= m\cdot g\cdot h\\
+			 &= 2,2 ~\kilo\gram\cdot 9,82 ~\meter\per\second\squared\cdot 12,9~\meter\\ 
+			 &= 280 ~\joule \approx 2,8\cdot 10^2 ~\joule
+	\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Opgaver}
+\begin{block}{Regn opgaver}
+	I skal nu regne opgaver\ldots ~I har ca. \alert{10 \minute}.
+\end{block}\pause\vfill
+\begin{block}{Gennemgang af opgave}
+	Vi gennemgår opgaverne\ldots
+\end{block}
+\end{frame}
+
+\section{Kinetisk energi}
+\begin{frame}{Kinetisk energi}
+En genstand i bevægelse siges at have en kinetisk energi, i sammenligning med en genstand som er i hvile.\vfill
+
+\begin{theorem}
+En genstand med massen $m$ og som bevæger sig med farten $v$ har den kinetiske energi:\\
+\begin{equation}
+\notag E_\mathrm{kin} = \frac{1}{2}\cdot m\cdot v^2
+\end{equation}
+\end{theorem}\vfill
+\end{frame}
+
+\begin{frame}{Kinetisk energi}
+\input{kin-mass}
+\end{frame}
+
+\begin{frame}{Kinetisk energi}
+\input{kin-vel}
+\end{frame}
+%\begin{frame}{Example}
+%\begin{block}{Test}
+%Bla. bla. bla.
+%\end{block}
+%\begin{block}{Video}
+%	\begin{center}
+%	\includemovie{.75\paperwidth}{.5\paperheight}{Cluster.mov}
+%	\end{center}
+%\end{block}
+%\end{frame}
+\end{document}

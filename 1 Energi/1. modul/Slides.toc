@@ -1,0 +1,7 @@
+\beamer@endinputifotherversion {3.10pt}
+\select@language {danish}
+\beamer@sectionintoc {1}{Energiformer}{2}{0}{1}
+\beamer@sectionintoc {2}{Enheder}{13}{0}{2}
+\beamer@sectionintoc {3}{Energioms\IeC {\ae }tning}{15}{0}{3}
+\beamer@sectionintoc {4}{Potentiel energi i tyngdefeltet}{20}{0}{4}
+\beamer@sectionintoc {5}{Kinetisk energi}{39}{0}{5}

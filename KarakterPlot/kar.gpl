@@ -1,0 +1,43 @@
+#PLOTTING ROUTINE FOR GENERATING GRADE FIGURES
+
+set encoding iso_8859_1
+set boxwidth 1
+
+plot "kar.dat" u 1:2:xtic(1) w boxes fs solid 0.7 notitle
+max_y = GPVAL_DATA_Y_MAX + 1;
+min_y = GPVAL_DATA_Y_MIN - 1;
+m1 = system("tail -7 kar.dat | awk '{print $3}'")
+x1 = m1 - 2
+y1 = max_y -0.5
+m2 = system("tail -7 kar.dat | awk '{print $4}'")
+x2 = m2 + 1
+y2 = max_y -0.5
+# X-AXIS
+set xl "Karakter"
+
+# Y-AXIS
+set yl "Forekomster"
+set yr [0:max_y]
+
+set arrow 1 from m1,max_y to m1,0 lw 3 lc rgb "#0000FF" nohead
+set arrow 2 from m2,max_y to m2,0 lw 3 lc rgb "#00FF00" nohead
+
+set label 1 sprintf("M_1 = %s",m1) at x1,y1
+set label 2 sprintf("M_2 = %s",m2) at x2,y2 
+replot
+
+set term postscript enhanced color 
+set output "figures/kar1.eps"
+replot
+unset output
+
+set term epslatex
+set output "figures/kar.tex"
+replot
+unset output
+
+
+set term svg
+set output "figures/kar.svg"
+replot
+unset output

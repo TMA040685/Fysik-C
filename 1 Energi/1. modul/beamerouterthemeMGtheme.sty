@@ -1,0 +1,40 @@
+% +
+%	This file may be distributed and/or modified
+%
+%	1. under the LaTeX Project License and/or
+%	2. under the GNU Public License.
+%
+%	See the file doc/licenses/LICENSE for more details
+% +
+
+\mode<presentation>
+
+
+% Colour definitions:
+\definecolor{MGBlue}{RGB}{1,0,128}
+
+% Footer styling
+\setbeamercolor{section in footer}{fg=white, bg=MGBlue}
+\setbeamercolor{subsection in footer}{fg=white, bg=MGBlue}
+\setbeamercolor{pagenumber in footer}{fg=white, bg=MGBlue}
+
+\defbeamertemplate*{footline}{MGtheme}
+{
+	\leavevmode%
+	\hbox{
+	\begin{beamercolorbox}[wd=.34\paperwidth,ht=2.25ex, dp=1ex,center]{section in footer}%
+		\inserttitle
+	\end{beamercolorbox}
+	\begin{beamercolorbox}[wd=.34\paperwidth,ht=2.25ex, dp=1ex,center]{section in footer}%
+		\insertsectionhead
+	\end{beamercolorbox}	
+	\begin{beamercolorbox}[wd=.34\paperwidth,ht=2.25ex, dp=1ex,center]{section in footer}%
+		\insertframenumber{ } / \inserttotalframenumber\hspace*{2ex}
+	\end{beamercolorbox}}%
+	\vskip0pt%
+}%
+
+\setbeamersize{text margin left = 1em, text margin right= 1em}
+
+\mode
+<all>

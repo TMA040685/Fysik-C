@@ -1,0 +1,57 @@
+% +
+%	This file may be distributed and/or modified
+%
+%	1. under the LaTeX Project License and/or
+%	2. under the GNU Public License.
+%
+%	See the file doc/licenses/LICENSE for more details
+% +
+
+\mode<presentation>
+
+
+\newif\ifbeamer@secheader
+\beamer@secheaderfalse
+
+\DeclareOptionBeamer{secheader}{\beamer@secheadertrue}
+\ProcessOptionsBeamer
+
+\useoutertheme{MGtheme}
+
+%	Colour definitions
+\definecolor{MGBlue}{RGB}{1,0,128}
+\definecolor{MGRed}{RGB}{254,0,0}
+
+%	Set the title color
+\setbeamercolor{title}{fg=MGRed}%	Colour definitions
+\definecolor{MGBlue}{RGB}{1,0,128}
+\definecolor{MGRed}{RGB}{254,0,0}
+
+%	Set the title color
+\setbeamercolor{title}{fg=MGRed}
+
+%	Set colors for specific elements
+\setbeamercolor{block}{fg=MGBlue}
+\setbeamercolor{block title}{fg=MGBlue}
+\setbeamercolor{block item}{fg=MGBlue}
+\setbeamercolor{itemize item}{fg=MGBlue}
+
+
+%	Frame title styling
+\setbeamertemplate{frametitle}{\vspace{.4cm} \color{MGRed} \insertframetitle\newline\hrule}
+
+\usesubitemizeitemtemplate{%
+	\tiny\raise1.5pt\hbox{\color{beamerstructure}$\blacktriangleright$}%
+}
+
+\usesubsubitemizeitemtemplate{%
+	\tiny\raise1.5pt\hbox{\color{beamerstructure}$\bigstar$}%
+}
+
+
+\setbeamersize{text margin left=1em, text margin right=1em}
+\setbeamersize{frametitle=\huge}
+
+\ifbeamer@secheader\else\setbeamertemplate{headline}[default]\fi
+\mode
+<all>

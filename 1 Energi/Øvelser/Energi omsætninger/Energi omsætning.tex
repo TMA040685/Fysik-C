@@ -1,0 +1,250 @@
+\documentclass[10pt,twoside,final]{article}
+
+%%%% LOAD PACKAGES %%%%
+\usepackage[inner=2cm,outer=1cm,top=3cm,bottom=2cm]{geometry}			% SET PAGE GEOMETRY
+\usepackage{amsmath}			% APPLY MATHEMATICS
+\usepackage[applemac]{inputenc}	% SET THE INPUT ENCODING
+\usepackage[danish]{babel}		% SET THE HYPHENATION TO DANISH
+\usepackage{color}				% ENABLE THE POSSIBILITY OF USING COLORS
+\usepackage{graphicx}			% ENABLE USE OF GRAPHICS
+\usepackage{tikz}				% ENABLE IN FILE DRAWING
+\usepackage{eso-pic}			% ENABLE WATERMARK-PICTURE
+\usepackage{SIunits}			% ENABLE THE SI-UNITS SYSTEM
+\usepackage{fontspec}			% ENABLE CUSTOM FONTS
+\usepackage{fancyhdr}			% ENABLE HEADER/FOOTER CUSTOMISATION
+\usepackage{booktabs}			% ENABLE PRETTY TABLES
+\usepackage{wasysym,theorem,wrapfig}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{natbib}
+\usepackage{appendix}
+\usepackage{pdflscape}
+\usepackage{showkeys}%,showframe}
+\usepackage[colorlinks]{hyperref}
+\usepackage{amssymb}
+
+%%%% CUSTOMISE PACKAGES %%%%
+\setmainfont[Ligatures=TeX]{Arial}
+
+\graphicspath{{figures/}}
+\citestyle{aa}
+%\AddToShipoutPicture*{
+%	\put(-10,-5){
+%		\parbox[b][\paperheight]{\paperwidth}{%
+%			\vfill
+%			\centering
+%			{\tikz\node[opacity=0.5]{\includegraphics[height=\paperheight]{galaxy}};}
+%			\vfill
+%		}
+%	}
+%}
+
+\newcommand{\apjs}{apjss}
+\newcommand{\mnras}{mn}
+\geometry{a4paper}
+\pagestyle{fancy}
+
+\definecolor{DSB}{cmyk}{1,0.7,0,0.3}
+\definecolor{DSR}{cmyk}{0,0.88,0.52,0}
+
+
+
+\parindent 0pt
+
+\fancypagestyle{plain}
+\fancyhf{}
+\fancyhead[LE,LO] {T.~M.~Amby}
+\fancyhead[RO,RE] {Vejledning til {\sl Opgaven Energi i hjemmet}}
+\fancyfoot[C] {\thepage}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+
+%%%% MACROS BOXES %%%%
+\mdfsetup{skipabove=\topskip,skipbelow=\topskip}
+	
+\newcounter{Exem}[section]
+\newenvironment{Exem}[1][]{%
+	\stepcounter{Exem}%
+	\ifstrempty{#1}%
+		{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east), outer sep=0pt]
+				\node[anchor=east, rectangle,fill=red!15]
+				{\strut Eksempel ~\theExem};}}
+		}%
+		{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east), outer sep=0pt]
+				\node[anchor=east, rectangle,fill=red!15]
+				{\strut Eksempel ~\theExem:~#1};}}%
+		}%
+		\mdfsetup{innertopmargin=10pt,linecolor=DSB,roundcorner=5mm,%
+				linewidth=.75pt,topline=true, backgroundcolor=red!15, rightmargin=-1cm,leftmargin=1cm,}
+				%frametitleaboveskip=\dimexpr-\ht\strutbox\relax,}
+		\begin{mdframed}[]\relax%
+		}{\end{mdframed}}
+
+\newcounter{Opg}[section]
+\newenvironment{Opg}[1][]{%
+	\stepcounter{Opg}%
+	\ifstrempty{#1}%
+		{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east), outer sep=0pt]
+				\node[anchor=east, rectangle,fill=gray!50]
+				{\strut Opgave ~\theOpg};}}
+		}%
+		{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east), outer sep=0pt]
+				\node[anchor=east, rectangle,fill=gray!20]
+				{\strut Opgave ~\theOpg:~#1};}}%
+		}%
+		\mdfsetup{innertopmargin=10pt,linecolor=DSB,roundcorner=5mm,%
+				linewidth=.75pt,topline=true, backgroundcolor=gray!20,}
+				%frametitleaboveskip=\dimexpr-\ht\strutbox\relax,}
+		\begin{mdframed}[]\relax%
+		}{\end{mdframed}}
+	
+
+%%%% PREPARE DOCUMENT %%%%
+\title{\fontspec[SizeFeatures={{Size=40}}]{Neo Tech Std}\color{DSR}\MakeUppercase{Energi i Hjemmet}}
+\author{Thomas Mellergaard Amby}
+\date{}
+
+%%%% BEGIN DOCUMENT %%%%
+\begin{document}
+\thispagestyle{empty}
+
+
+\maketitle
+
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\section{\fontspec{Neo Tech Std}\color{DSB}\uppercase{Introduktion}}
+Bevidsthed om hvordan vi anvender energien er meget vigtig hvis vi skal klare de mål som skiftende regeringer sætter for den grønne omstilling her i Danmark. Samtidig med at vi bliver bedre til at udnytte den energi vi har til rådighed, bliver vi også mere afhængige af energien. Havde vi ikke energi var der ingen TV, ingen mobiltelefon, ingen computer, intet elektrisk lys, ingen internet osv. Det viser sig at langt de fleste danskere ikke er klar over hvad de rent faktisk bruger energien til i deres dagligdag. Det skal vi undersøge i denne opgave. 
+
+\section{\fontspec{Neo Tech Std}\color{DSB}\uppercase{Opgavens opbygning}}
+Opgaven kan deles ind i tre faser
+
+\subsection{\fontspec{Neo Tech Std}\color{DSR}\uppercase{Fase 1}}
+I denne fase skal du dokumentere dit energiforbrug. Dette gør du ved at føre en logbog over hvor lang tid, du f.eks. har set tv, har hørt radio, har anvendt din computer, har været i bad, har ladet din telefon, med andre ord alt hvad du laver. 
+Lav et passende skema til at notere dine data i, dette kan f.eks. gøres i MS Excel eller ligende, {\sl er du i tvivl om hvad du skal så kom og spørg}.
+
+\subsection{\fontspec{Neo Tech Std}\color{DSR}\uppercase{Fase 2}}
+Du skal nu regne dit daglige energi forbrug ud, på baggrund af de data du har noteret i dit skema. Her skal du endvidere finde ud af hvor meget strøm de elektriske apparater anvender. Dette er typisk angivet med et tal på bagsiden af apparatet. Dette tal kaldes for apparatets effekt. 
+
+\subsection{\fontspec{Neo Tech Std}\color{DSR}\uppercase{Fase 3}}
+Forestil dig nu at du er kunderådgiver hos, NRGI, Dong Energy eller lignende forsyningsselskab. Du skal nu skrive et brev til dine forældre hvori du redegøre for hvordan de kan opnåenergi besparelser med udgangspunkt i den analyse af dit daglige energiforbrug. Dit brev skal indeholde forslag til konkrete besparelser med angivelse af hvor meget man ville kunne spare pr. år ved at indfører dine tiltag. 
+
+\section{\fontspec{Neo Tech Std}\color{DSB}\uppercase{Baggrund}}
+Når vi snakker om hvor meget energi man bruger i hverdagen taler vi sjældent om hvor mange {\sl Joule} ({\bf \joule}) vi bruger. Man snakker med andre ord ikke om at et TV bruger så mange Joule eller el-kedelen bruger så mange joule. I stedet anvender vi enheden {\sl watt} ({\bf \watt}). Vi siger i daglig tale at TV'et bruger 1500 \watt, eller at el-kedlen bruger 2200 \watt. Watt er i virkeligheden et må for {\sl effekt}. Effekt er et mål for den mængde energi som et apparat omsætter på et bestemt tidsinterval. Det fysiske symbol som anvendes for effekt er $P$ og effekten måles som sagt i \watt. Om effekten gælder der følgende:
+\begin{equation}\label{eq:eff:1}
+	\mathrm{Effekt} = \frac{\mathrm{Energi}}{\mathrm{Tid}}
+\end{equation}
+
+Erstattes ordnene i formlen (\ref{eq:eff:1}) med de tilhørende fysiske størrelser. Effekten erstattes med $P$, energien med $E$ og tiden med $t$ bliver formlen til:
+\begin{equation}\label{eq:effekt}
+	P = \frac{E}{t}
+\end{equation}
+
+Formel (\ref{eq:effekt}) kaldes for {\sl effektligningen}. Betragter vi enhederne i effektligningen, ved vi allerede at effekten måles i \watt, energi har vi tidligere introduceret, og denne måles i enheden joule (\joule), tiden måler vi i fysik altid i enheden sekunder (\second). Sætter vi nu enhederne ind i formlen ser vi at:
+\begin{equation}\label{eq:eff:enh}
+	[P] = \frac{\joule}{\second}=\watt
+\end{equation}
+Formel (\ref{eq:eff:enh}) viser os at enheden \watt ~er defineret som \joule\per\second.
+
+\section{\fontspec{Neo Tech Std}\color{DSB}\uppercase{Fase 1}}
+\begin{Opg}[Lav en logbog]
+	Du skal lave et skema til at registrere dit daglige energi forbrug. Skemaet kan 	
+	være lavet i hånden eller på computeren. Det vigtige er at du har følgende 
+	informationer med. Hvor lang tid du har brugt apparatet, hvilken energitype 
+	har du brugt, elektrisk energi, varme, eller vand. endvidere er det 
+	hensigtismessigt at noterer hvad du har brugt energien til, samt hvilket 
+	apparat du har anvendt, og evt også apparatets effekt såfremt du kan finde 
+	informationer om det. Du kan finde et eksempel på et skema til at i appendix 
+	(\ref{sec:app:a}) bagerst i denne vejledning.\\
+\end{Opg}
+
+Når du har lavet en logbog til at registrer dit energi forbrug er du klar til at logge dit energiforbrug. Det er vigtigt når man laver en sådan undersøgelse at man opfører sig helt almindeligt, altså ikke tænker over om man bruger meget eller lidt energi. 
+
+\begin{Opg}[Registrer dit energiforbrug i 24 timer]
+	Du skal nu gennemføre en registrering af dit energiforbrug i løbet af 24 timer. 
+	Det er vigtigt at du er ærlig og at du er nøjagtig og omhyggeligt med at notere 
+	de krævede data i det skema du lavede i opgave 1.\\
+\end{Opg}
+
+\section{\fontspec{Neo Tech Std}\color{DSB}\uppercase{Fase 2}}
+Du har nu en logbog med optegnelser for energiforbruget på en almindelig gennemsnits dag i dit liv. Nu er det til at gennemføre en analyse af energiforbruget. Herunder følger et ekempel på de beregninger du skal igennem.
+
+\begin{Exem}[En lampe - tre forskellige pærer]
+	En familie har en lampe hvori der sidder en 60 \watt ~pære, familien bruger lampen 2 timer dagligt, hvor meget energi bruger familien?
+	
+	Først omskrives effekligningen således at energien $E$, er isoleret:
+	\begin{equation*}
+		E = P\cdot t = 60~\watt \cdot (2 ~\hour\cdot 60 ~\minute\per\hour\cdot 60 ~\second\per\minute) = 432000 ~\joule.
+	\end{equation*}
+	Som det fremgår af beregningen herover bliver det hurtigt til mange joule. 
+	derfor regner forsyningsselskaberne ikke i enheden joule men derimod i 
+	enheden kilowatt-timer (\kilo\watt\hour). Man kan nemt omregne mellem joule 
+	og kilowatt-timer
+	\begin{equation*}
+		1~\kilo\watt\hour = 3600000 ~\joule
+	\end{equation*}
+	Det betyder at vores energi fra før kan omregnes til enheden \kilo\watt\hour ~på følgende vis:
+	\begin{equation*}
+		E = \frac{432000~\joule}{3600000 ~\joule\per\kilo\watt\hour} = 0,12 ~\kilo\watt\hour.
+	\end{equation*}
+	Vi kan nu beregne hvad det koster familien at have pæren tændt i de to timer hverdag hele året når de skal betale forsyningsselskabet 201,92 øre\per\kilo\watt\hour. Først beregnes energien brugt på et år.
+	\begin{equation*}
+		E_{\mathrm{år}} = 0,12 ~\kilo\watt\hour\per\mathrm{dage}\cdot 365,2425 ~\mathrm{dage} = 43,83 ~\kilo\watt\hour.
+	\end{equation*}
+	Bemærk at energien er afrundet til to decimaler, men der regnes videre med den eksakte værdi. Nu kan vi beregne prisen familien skal betale for at have lampen tændt
+	\begin{equation*}
+		x = 43,83 ~\kilo\watt\hour \cdot 201,92 ~\mathrm{øre}\per\kilo\watt\hour = 8849,97 ~\mathrm{øre} \approx 8850 ~\mathrm{øre}
+	\end{equation*}
+	Bemærk at prisen rundes af til et heltal da det ikke giver mening at snakke om 0,97 øre. Det lyder måske ikke af meget at familien skal betale 88 kroner og 50 øre for at have pæren tændt to timer hver dag i et år. Men skifter de nu pæren ud med en tilsvarende sparepære eller LED pære vil der være penge at spare. Ved de samme beregninger kommer man frem til at det koster 22 kroner og 12 øre at have en 15 \watt ~sparepære tændt to timer hver dag i et år, mens en LED koster 8 kroner og 85 øre for den samme tid. Dermed ville familien kunne spare 79,65 kroner ved at udskifte pæren med en LED. Det vil sige at pæren i løbet af det første år vil kunne tjene sig selv hjem.
+\end{Exem}
+
+\begin{Opg}[Beregn dit energi forbrug]
+	Du skal nu beregne dit energiforbrug. Det er nemmest at beregne de forbrug du har af elektrisk energi, du kan bruge fremgangsmåden fra eksemplet ovenfor. Spørg eventuelt dine forældre hvad jeres el-pris, eller om du må se gamle el-regninger. Kender dine forældre ikke jeres el-pris, så brug da de 201,92 øre\per\kilo\watt\hour da denne er realistisk. 
+	Du behøver ikke at fokuserer på det energi forbrug du har i form af vand og varme.!
+\end{Opg}
+Når du skal perspektivere og sammenligne med fakta er energi styrelsens hjemmeside, du finder den ved at trykke \href{http://sparenergi.dk/forbruger/el/dit-elforbrug/hvor-meget-el-bruger-du}{her}.
+
+Når du har beregnet dit daglige energiforbrug bør du gange dette op således at du har dit årlige energiforbrug. Vurdere om du er tæt på et årligt elforbrug på 1000 \kilo\watt\hour, som er det anbefalede energi forbrug. Gang så dit daglige forbrug op med antallet af forbrugere i din husstand. og brug dette som jeres årlige energiforbrug.
+
+\section{\fontspec{Neo Tech Std}\color{DSB}\uppercase{Fase 3}}
+Du skal nu skrive et brev til dine forældre. I brevet er du kunderådgiver hos et forsyningsselskab. Du bestemmer selv hvilket selskab. Tonen og formuleringerne i brevet skal bære præg af at du er rådgiver og at det er en kunde uden forudsætninger for at forstå dine beregninger derfor skal du fokusere på hvilke vaner der skal ændres og hvilken konstant besparing der kan opnåes ved denne vaneændring. Dit brev må maksimalt have et omfang af 1 A4 side.
+
+
+\section{\fontspec{Neo Tech Std}\color{DSB}\uppercase{Hvad skal Afleveres }}
+Det forventes at du afleverer en zip-fil som indeholder følgende:
+\begin{itemize}
+	\item[-] Din logbog fra fase 1
+	\item[-] Dine beregniner fra fase 2
+	\item[-] Dit brev fra fase 3
+\end{itemize}
+I bedømmelsen vægtes brevet med 60 \% mens beregningerne  vægtes med 30 \% og logbogen med 10 \%. Det hele afleveres på Lectio.
+\clearpage
+%\begin{landscape}
+\appendix
+\section{Skema til data opsamling}
+\label{sec:app:a}
+\begin{table}[h!]
+	\centering
+	\caption{Eksempel på et skema til at notere dagligt energiforbrug i. Skemaet er blot vejledende og du bør selv lave et.}
+	\label{tbl:skema}
+	\begin{tabular}{@{ } ccc ccc ccc @{ }}
+		\toprule[2pt]
+			ID &	\multicolumn{2}{c}{Tid} &	\multicolumn{3}{c}{Type} &	\multicolumn{2}{c}{Beskrivelse} &	Effekt\\
+			     &	$\mathrm{t}_{\mathrm{start}}$ &	$\mathrm{t}_{\mathrm{slut}}$ & 	Elektrisk &	Varme &	Vand &	Formål &	Apparat & \\
+		\midrule
+			A &	05:30 & 05:40 & & & \checkmark & Bad & Bruser & \\
+			B &	05:55 & 06:00 & \checkmark & & & Kaffe & Kaffemaskine & 1000 \watt\\
+		\bottomrule[2pt]
+	\end{tabular}
+\end{table}
+%\end{landscape}
+\end{document}
